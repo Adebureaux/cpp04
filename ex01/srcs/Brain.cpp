@@ -21,4 +21,5 @@ Brain &Brain::operator=(const Brain &other)
 Brain::~Brain()
 {
 	std::cout << "Default Brain constructor called" << std::endl;
+	delete[] this->ideas;
 }
