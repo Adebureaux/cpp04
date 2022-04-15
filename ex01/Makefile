@@ -1,6 +1,6 @@
 NAME        = program
 
-SRCS        = srcs/main.cpp srcs/Animal.cpp srcs/Dog.cpp srcs/Cat.cpp srcs/WrongCat.cpp srcs/WrongAnimal.cpp
+SRCS        = srcs/main.cpp srcs/Animal.cpp srcs/Dog.cpp srcs/Cat.cpp srcs/WrongCat.cpp srcs/WrongAnimal.cpp srcs/Brain.cpp
 
 OBJS        = ${SRCS:.cpp=.o}
 
