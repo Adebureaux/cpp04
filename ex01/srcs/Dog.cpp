@@ -16,9 +16,8 @@ Dog::Dog(const Dog &other)
 
 Dog &Dog::operator=(const Dog &other)
 {
+	Animal::operator=(other);
 	this->brain = other.brain;
-	this->type = other.type;
-	this->sound = other.sound;
 	return (*this);
 }
 
@@ -26,4 +25,14 @@ Dog::~Dog()
 {
 	std::cout << "Default Dog destructor called" << std::endl;
 	delete this->brain;
+}
+
+void Dog::putIdea(const std::string idea, int index)
+{
+	this->brain->putIdea(idea, index);
+}
+
+std::string Dog::getIdea(int index) const
+{
+	return (this->brain->getIdea(index));
 }

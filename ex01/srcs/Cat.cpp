@@ -16,9 +16,8 @@ Cat::Cat(const Cat &other)
 
 Cat &Cat::operator=(const Cat &other)
 {
+	Animal::operator=(other);
 	this->brain = other.brain;
-	this->type = other.type;
-	this->sound = other.sound;
 	return (*this);
 }
 
@@ -26,4 +25,14 @@ Cat::~Cat()
 {
 	std::cout << "Default Cat destructor called" << std::endl;
 	delete this->brain;
+}
+
+void Cat::putIdea(const std::string idea, int index)
+{
+	this->brain->putIdea(idea, index);
+}
+
+std::string Cat::getIdea(int index) const
+{
+	return (this->brain->getIdea(index));
 }

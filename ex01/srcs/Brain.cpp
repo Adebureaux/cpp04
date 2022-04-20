@@ -3,8 +3,6 @@
 Brain::Brain()
 {
 	std::cout << "Default Brain constructor called" << std::endl;
-	this->ideas[0] = "Bark";
-	this->ideas[50] = "Tuna";
 }
 
 Brain::Brain(const Brain &other)
@@ -22,5 +20,15 @@ Brain &Brain::operator=(const Brain &other)
 
 Brain::~Brain()
 {
-	std::cout << "Default Brain constructor called" << std::endl;
+	std::cout << "Default Brain destructor called" << std::endl;
+}
+
+void Brain::putIdea(const std::string idea, int index)
+{
+	this->ideas[index] = idea;
+}
+
+std::string Brain::getIdea(int index) const
+{
+	return (this->ideas[index]);
 }

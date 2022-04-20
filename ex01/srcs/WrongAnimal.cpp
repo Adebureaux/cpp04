@@ -1,10 +1,12 @@
 #include "../includes/WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal() : type("Wrong animal"), sound("Unknown wrong animal sound") {}
+WrongAnimal::WrongAnimal() : type("Wrong animal"), sound("Unknown wrong animal sound")
+{
+	std::cout << "Default WrongAnimal constructor called" << std::endl;
+}
 
 void WrongAnimal::makeSound() const
 {
-	std::cout << "Default WrongAnimal constructor called" << std::endl;
 	std::cout << this->sound << std::endl;
 }
 

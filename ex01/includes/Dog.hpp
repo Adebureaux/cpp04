@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 #include "Animal.hpp"
-#include "Brain.hpp"
 
 class Dog : public Animal
 {
@@ -13,6 +12,8 @@ class Dog : public Animal
 	Dog(const Dog &other);
 	Dog &operator=(const Dog &other);
 	~Dog();
+	void putIdea(const std::string idea, int index);
+	std::string getIdea(int index) const;
 
 	private:
 	Brain* brain;
