@@ -5,7 +5,6 @@ Dog::Dog() : Animal()
 	std::cout << "Default Dog constructor called" << std::endl;
 	this->brain = new Brain();
 	this->type = "Dog";
-	this->sound = "Woof";
 }
 
 Dog::Dog(const Dog &other)
@@ -16,23 +15,23 @@ Dog::Dog(const Dog &other)
 
 Dog &Dog::operator=(const Dog &other)
 {
-	Animal::operator=(other);
+	this->type = other.type;
 	this->brain = other.brain;
 	return (*this);
 }
 
 Dog::~Dog()
 {
-	std::cout << "Default Dog destructor called" << std::endl;
 	delete this->brain;
+	std::cout << "Default Dog destructor called" << std::endl;
 }
 
-void Dog::putIdea(const std::string idea, int index)
+void Dog::makeSound() const
 {
-	this->brain->putIdea(idea, index);
+	std::cout << "Woof" << std::endl;
 }
 
-std::string Dog::getIdea(int index) const
+std::string Dog::getType() const
 {
-	return (this->brain->getIdea(index));
+	return (this->type);
 }

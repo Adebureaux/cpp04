@@ -16,7 +16,6 @@ class Animal
 
 	protected:
 	std::string type;
-	std::string sound;
 };
 
 #endif

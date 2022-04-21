@@ -14,12 +14,9 @@ class Animal
 	virtual ~Animal();
 	virtual void makeSound() const;
 	std::string getType() const;
-	virtual void putIdea(const std::string idea, int index) = 0;
-	virtual std::string getIdea(int index) const = 0;
 
 	protected:
 	std::string type;
-	std::string sound;
 };
 
 #endif

@@ -22,13 +22,3 @@ Brain::~Brain()
 {
 	std::cout << "Default Brain destructor called" << std::endl;
 }
-
-void Brain::putIdea(const std::string idea, int index)
-{
-	this->ideas[index] = idea;
-}
-
-std::string Brain::getIdea(int index) const
-{
-	return (this->ideas[index]);
-}
