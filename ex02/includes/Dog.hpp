@@ -12,7 +12,9 @@ class Dog : public Animal
 	Dog(const Dog &other);
 	Dog &operator=(const Dog &other);
 	~Dog();
+
 	void makeSound() const;
+	uintptr_t getBrainAddress(void);
 
 	private:
 	Brain* brain;

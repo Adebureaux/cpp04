@@ -1,8 +1,6 @@
 #ifndef CAT_HPP
 # define CAT_HPP
 
-#include <iostream>
-#include <string>
 #include "Animal.hpp"
 
 class Cat : public Animal
@@ -12,7 +10,9 @@ class Cat : public Animal
 	Cat(const Cat &other);
 	Cat &operator=(const Cat &other);
 	~Cat();
+
 	void makeSound() const;
+	uintptr_t getBrainAddress(void);
 
 	private:
 	Brain* brain;

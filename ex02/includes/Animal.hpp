@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <stdint.h>
 #include "Brain.hpp"
 
 class Animal

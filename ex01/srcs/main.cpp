@@ -44,5 +44,13 @@ int main(void)
 	delete dog1;
 	delete unknown;
 	delete cat;
+
+
+	// Verify deep copy
+	Dog dog;
+	Dog tmp = dog;
+	
+	std::cout << std::hex << "0x" << dog.getBrainAddress() << std::endl;
+	std::cout << std::hex << "0x" << tmp.getBrainAddress() << std::endl;
 	return (0);
 }
